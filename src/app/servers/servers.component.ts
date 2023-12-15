@@ -39,7 +39,8 @@ export class ServersComponent implements OnInit {
   }
   onToggleDetails() {
     this.details = !this.details;
-    let num = this.detailsClickCount.length + 1;
-    this.detailsClickCount.push(num);
+    // let num = this.detailsClickCount.length + 1;
+    // this.detailsClickCount.push(num);
+    this.detailsClickCount.push(Date());
   }
 }

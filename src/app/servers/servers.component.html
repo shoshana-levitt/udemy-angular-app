@@ -19,9 +19,9 @@
 </button>
 <p *ngIf="details">Secret Password = 'tuna'</p>
 <p
-  *ngFor="let count of detailsClickCount"
-  [ngStyle]="{ backgroundColor: count > 4 ? 'blue' : 'initial' }"
-  [ngClass]="{ 'white-text': count > 4 }"
+  *ngFor="let count of detailsClickCount; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'initial' }"
+  [ngClass]="{ 'white-text': i >= 4 }"
 >
   {{ count }}
 </p>
