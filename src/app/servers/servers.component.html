@@ -13,3 +13,15 @@
 <!-- <p>{{ serverCreationStatus }}</p> -->
 <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <app-server *ngFor="let server of servers"></app-server>
+<hr />
+<button class="btn btn-primary" (click)="onToggleDetails()">
+  Display Details
+</button>
+<p *ngIf="details">Secret Password = 'tuna'</p>
+<p
+  *ngFor="let count of detailsClickCount"
+  [ngStyle]="{ backgroundColor: count > 4 ? 'blue' : 'initial' }"
+  [ngClass]="{ 'white-text': count > 4 }"
+>
+  {{ count }}
+</p>
